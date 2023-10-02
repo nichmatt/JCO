@@ -1,0 +1,600 @@
+:root {
+  --color-box: #e9e9e9;
+  --color-primary: rgb(250, 109, 1);
+  --color-primaryhover: rgb(201, 87, 0);
+}
+
+* {
+  max-width: 100vw;
+  /* min-height: 100vh; */
+}
+
+/* navbar section */
+
+#navbar {
+  width: 100%;
+  height: 100px;
+  max-height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(236, 236, 236);
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+}
+
+#navbar-menu {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  margin-inline-end: 20%;
+}
+#navbar-menu ul {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+
+#logo-jco {
+  padding-left: 20%;
+}
+#logo-jco img {
+  width: 60px;
+  animation: spinLogo 5s infinite;
+}
+
+@keyframes spinLogo {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+#navbar-menu ul li {
+  padding: 10px;
+  list-style: none;
+  cursor: pointer;
+}
+
+#navbar-menu ul li:hover {
+  padding: 10px;
+  list-style: none;
+  color: rgb(250, 109, 1);
+}
+
+/* fetching Category  */
+
+#category-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid black; */
+  width: 80vw;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-inline: auto;
+}
+
+#category-list-headers {
+  display: flex;
+  justify-content: space-between;
+  margin-inline-start: 10vw;
+  margin-inline-end: 10vw;
+  margin-top: 10vh;
+}
+
+#category-list-headers h1 {
+  font-size: 24px;
+  margin-right: 20vw;
+}
+
+#category-list-headers button {
+  border: none;
+  background-color: rgb(250, 109, 1);
+  padding: 15px;
+  border-radius: 50px;
+  margin-left: 20vw;
+  font-weight: 600;
+}
+
+#category-list-headers button:hover {
+  border: none;
+  background-color: rgb(176, 76, 0);
+  padding: 15px;
+  border-radius: 50px;
+  margin-left: 20vw;
+}
+
+#categorylist button {
+  margin: 5px;
+  border: none;
+  color: var(--color-primary);
+}
+#categorylist button:hover {
+  margin: 5px;
+  border: none;
+  color: rgb(255, 194, 148);
+}
+/* 
+#categorylist {
+  background-color: aqua;
+  border: 1px solid black;
+} */
+
+#category-list tr {
+  text-align: center;
+}
+
+#category-list th {
+  padding-inline: 4vw;
+  padding-top: 50px;
+  font-size: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+#category-list td {
+  padding-inline: 4vw;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  border-bottom: 1px solid rgb(195, 195, 195);
+}
+
+/* login-section */
+#login-section {
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-content {
+  max-width: 400px;
+  background-color: #e9e9e9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-container img {
+  width: 50px; /* Adjust the size of the logo as needed */
+}
+.login-form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(250, 109, 1);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+#login-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login-section input {
+  max-width: 70%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#login-section input[type="text"],
+#login-section input[type="password"] {
+  width: 100%;
+}
+
+#login-section button {
+  width: 75%;
+  padding: 10px;
+  background-color: rgb(250, 109, 1);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#login-section button:hover {
+  background-color: rgb(162, 70, 0);
+}
+
+#login-section .alternative-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#login-section .alternative-link {
+  font-size: 0.75rem;
+}
+#login-section .alternative-link a {
+  color: rgb(250, 109, 1);
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+#login-section .alternative-link a:hover {
+  color: rgb(159, 69, 0);
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+
+#login-section #agreement {
+  align-items: center;
+  margin-block: 2px;
+}
+
+#login-section #agreement p {
+  font-size: 0.75rem;
+  color: #a4a4a4;
+  text-align: center;
+  margin-block: 2px;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  #login-section .login-content {
+    max-width: 90%;
+  }
+}
+/* end of login-section */
+
+/* addCategory */
+#categoryform-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoryform-container {
+  width: 350px;
+  height: 275px;
+  border-radius: 10px;
+  background-color: #e9e9e9;
+}
+
+.category-form {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-form form button {
+  background-color: rgb(250, 109, 1);
+  width: 80px;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  border: none;
+  /* margin-left: 15px; */
+  margin-top: 10px;
+}
+
+.category-form form button:hover {
+  background-color: rgb(129, 56, 0);
+  width: 80px;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  border: none;
+  /* margin-left: 15px; */
+  margin-top: 10px;
+}
+
+.category-form form input {
+  border: none;
+  padding: 5px;
+}
+/* end of addCategory */
+
+/* Add User Section */
+#addUser-Section {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#addUser-container {
+  width: 300px;
+  padding-bottom: 40px;
+  /* height: 450px; */
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  padding-inline: 40px;
+  background-color: var(--color-box);
+  border-radius: 5px;
+}
+
+#addUser-container h1 {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#addUser-container input {
+  margin-block: 10px;
+  border: none;
+  padding: 5px;
+  width: 100%;
+}
+
+#addUser-container select {
+  margin-block: 10px;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: var(--color-primary);
+  color: #e9e9e9;
+  width: 100%;
+}
+
+#addUser-container button {
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-box);
+  padding: 5px;
+  border-radius: 3px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* End of Add User Section */
+
+/* LIST PRODUCT */
+#ListProduct-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#ListProduct-container {
+  width: 80%;
+}
+
+#ListProduct-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: 10%;
+  margin-block: 60px;
+}
+
+#ListProduct-heading h3 {
+  font-size: 24px;
+}
+
+#ListProduct-heading button {
+  background-color: var(--color-primary);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+#ListProduct-heading button:hover {
+  background-color: rgb(154, 67, 0);
+}
+
+#List-product-table {
+  overflow-y: auto;
+  height: 30vh;
+}
+
+#List-product-table table {
+  width: 100%;
+  align-content: center;
+  margin: auto;
+}
+
+#List-product-table th {
+  font-size: 12px;
+  text-align: center;
+}
+
+#List-product-table td {
+  font-size: 12px;
+  text-align: center;
+}
+
+#List-product-table td img {
+  width: 75px;
+  padding-block: 10px;
+}
+
+#List-product-table button {
+  margin: 5px;
+  border: none;
+  color: var(--color-primary);
+}
+
+/* END OF LIST PRODUCT */
+
+/* Ingredients  */
+#SectionIngredients {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#IngredientsContainer {
+  padding: 20px;
+  background-color: var(--color-box);
+  border-radius: 3px;
+  margin: auto;
+}
+
+#IngredientsContainer img {
+  max-width: 150px;
+}
+
+#IngredientsContainer h3 {
+  font-weight: 400;
+}
+
+#IngredientsContainer button {
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+/* end of Ingredients  */
+
+/* add Product */
+#AddProduct-section {
+  height: 100vh;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#AddProduct-container {
+  /* height: 20vh; */
+  width: 40vh;
+  background-color: var(--color-box);
+  padding: 20px;
+  border-radius: 3px;
+}
+
+#AddProduct-container h3 {
+  margin-inline: 10px;
+  margin-block: 10px;
+  border: none;
+  padding: 5px;
+}
+
+#AddProduct-container input {
+  width: 90%;
+  margin-inline: 10px;
+  margin-block: 10px;
+  border: none;
+  padding: 5px;
+}
+
+#AddProduct-container select {
+  width: 90%;
+  margin-inline: 10px;
+  margin-block: 10px;
+  border: none;
+  padding: 5px;
+}
+#AddProduct-container button {
+  width: 90%;
+  margin-inline: 10px;
+  margin-block: 10px;
+  border: none;
+  padding: 5px;
+  background-color: var(--color-primary);
+}
+
+#AddProduct-container button:hover {
+  width: 90%;
+  margin-inline: 10px;
+  margin-block: 10px;
+  border: none;
+  padding: 5px;
+  background-color: var(--color-primaryhover);
+}
+
+#ingredients-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#ingredients-input input {
+  width: 75%;
+}
+
+#ingredients-input p {
+  margin-top: 14px;
+  color: black !important;
+}
+/* end of add Product */
+
+/* Loading section */
+#loading-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading-container {
+  padding: 20px;
+}
+
+#loading-container img {
+  width: 10vw;
+  animation: logoloading 1s ease infinite;
+}
+
+@keyframes logoloading {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+#loading-container h1 {
+  font-size: 1.5em;
+  align-items: center;
+  margin-top: 2.5vw;
+  animation: textloading 2s ease-in-out infinite;
+  text-align: center;
+}
+
+@keyframes textloading {
+  from {
+    opacity: 50%;
+  }
+  to {
+    rotate: 100%;
+  }
+}
+/* End of Loading section */
+
+/* FOOTER LANDING */
+#FooterLanding-section {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  background-color: #a4a4a4;
+}
+/* END OF FOOTER LANDING */
